@@ -1,0 +1,234 @@
+{
+    "Leaders" : {
+        "21": {
+            "id": 21,
+            "Name": "&nbsp;",
+            "Score": 1
+        },
+        "22": {
+            "id": 22,
+            "Name": "\\",
+            "Score": 3
+        },
+        "23": {
+            "id": 23,
+            "Name": "null",
+            "Score": 3
+        },
+        "24": {
+            "id": 24,
+            "Name": "None",
+            "Score": 3
+        },
+        "25": {
+            "id": 25,
+            "Name": ";DROP TABLE *;",
+            "Score": 2
+        },
+        "26": {
+            "id": 26,
+            "Name": "'",
+            "Score": 2
+        },
+        "27": {
+            "id": 27,
+            "Name": "river",
+            "Score": 7
+        },
+        "28": {
+            "id": 28,
+            "Name": "Boca",
+            "Score": 1
+        },
+        "29": {
+            "id": 29,
+            "Name": "river",
+            "Score": 1
+        },
+        "30": {
+            "id": 30,
+            "Name": "No Vuelven Mas",
+            "Score": 1
+        },
+        "31": {
+            "id": 31,
+            "Name": "Juan",
+            "Score": 2
+        },
+        "32": {
+            "id": 32,
+            "Name": "Rodolfo",
+            "Score": 2
+        },
+        "33": {
+            "id": 33,
+            "Name": "rodolfo",
+            "Score": 11
+        },
+        "34": {
+            "id": 34,
+            "Name": "massa tomando falopa",
+            "Score": 5
+        },
+        "35": {
+            "id": 35,
+            "Name": "They don\u00b4t see",
+            "Score": 17
+        },
+        "36": {
+            "id": 36,
+            "Name": "John",
+            "Score": 1
+        },
+        "37": {
+            "id": 37,
+            "Name": "asd",
+            "Score": 5
+        },
+        "38": {
+            "id": 38,
+            "Name": "Huracan",
+            "Score": 2
+        },
+        "39": {
+            "id": 39,
+            "Name": "Boca",
+            "Score": 4
+        },
+        "40": {
+            "id": 40,
+            "Name": "Bioca",
+            "Score": 2
+        },
+        "41": {
+            "id": 41,
+            "Name": "caca",
+            "Score": 3
+        },
+        "42": {
+            "id": 42,
+            "Name": "caca",
+            "Score": 1
+        },
+        "43": {
+            "id": 43,
+            "Name": "caca",
+            "Score": 3
+        },
+        "44": {
+            "id": 44,
+            "Name": "Nil pointer",
+            "Score": 1
+        },
+        "45": {
+            "id": 45,
+            "Name": "Carlos",
+            "Score": 1
+        },
+        "46": {
+            "id": 46,
+            "Name": "Carlos",
+            "Score": 2
+        },
+        "47": {
+            "id": 47,
+            "Name": "jllk",
+            "Score": 17
+        },
+        "48": {
+            "id": 48,
+            "Name": "Pepe",
+            "Score": 1
+        },
+        "49": {
+            "id": 49,
+            "Name": "momo",
+            "Score": 1
+        },
+        "50": {
+            "id": 50,
+            "Name": "lolo",
+            "Score": 4
+        },
+        "51": {
+            "id": 51,
+            "Name": "Federico",
+            "Score": 8
+        },
+        "52": {
+            "id": 52,
+            "Name": "Tuviejaesunareputa",
+            "Score": 3
+        },
+        "53": {
+            "id": 53,
+            "Name": "Gordo compu77",
+            "Score": 1
+        },
+        "54": {
+            "id": 54,
+            "Name": "El rediturro 2000",
+            "Score": 1
+        },
+        "55": {
+            "id": 55,
+            "Name": "j",
+            "Score": 2
+        },
+        "56": {
+            "id": 56,
+            "Name": "Pipo",
+            "Score": 2
+        },
+        "57": {
+            "id": 57,
+            "Name": "U",
+            "Score": 1
+        },
+        "58": {
+            "id": 58,
+            "Name": "Alexander",
+            "Score": 6
+        },
+        "59": {
+            "id": 59,
+            "Name": "Nahue",
+            "Score": 2
+        },
+        "60": {
+            "id": 60,
+            "Name": "Nahue",
+            "Score": 17
+        },
+        "61": {
+            "id": 61,
+            "Name": "They dont visualize it",
+            "Score": 1
+        },
+        "62": {
+            "id": 62,
+            "Name": "Cris",
+            "Score": 1
+        },
+        "63": {
+            "id": 63,
+            "Name": "Sss",
+            "Score": 1
+        },
+        "64": {
+            "id": 64,
+            "Name": "Pedro",
+            "Score": 2
+        },
+        "65": {
+            "id": 65,
+            "Name": "window.alert(\u201ctest\u201d);",
+            "Score": 3
+        },
+        "66": {
+            "id": 66,
+            "Name": "jose",
+            "Score": 3
+        }
+    }
+}
