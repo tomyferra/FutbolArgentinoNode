@@ -1,11 +1,10 @@
-
+const express = require ('express');
 const morgan  = require('morgan');
 const path = require('path');
-const express = require('express')
-const mongoose = require('mongoose');
-const app = express()
+const {mongoose} = require('./database')
+const app = express();
+
 const cors = require('cors');
-require('dotenv').config()
 
 // Connect to MongoDB
 mongoose.connect(process.env.TEAMS_URI)
