@@ -7,7 +7,7 @@ const Team = require('../models/teams');
 router.get('/', async (req,res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE,OPTIONS');
-  const teams = await Team.find();
+  const teams = await Team.find().limit(5);
   res.json(teams);
   console.log("running....")
 
