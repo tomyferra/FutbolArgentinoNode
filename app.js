@@ -1,10 +1,31 @@
 
+const morgan  = require('morgan');
+const path = require('path');
 const express = require('express')
+const mongoose = require('mongoose');
 const app = express()
 const cors = require('cors');
+require('dotenv').config()
 
-const port = 3000
-app.use(cors());
+// Connect to MongoDB
+mongoose.connect(process.env.TEAMS_URI)
+    .then(() => console.log('MongoDB conectada correctamente'))
+    .catch(err => console.error('MongoDB error:', err));
+
+//settings
+var port = process.env.PORT || 5001
+// app.set('port', process.env.PORT || 5001);
+//Middlewares
+app.use(morgan('dev'));
+app.use(express.json());
+
+// Enable CORS
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    next();
+});
 
 const teams = [
   {
@@ -2019,27 +2040,37 @@ const teams = [
   }
 ]
 
-const leaderboard = [
-  {
-    "id" : '3155cf13f4a04afe9ac08dd885720976',
-    "Name": "Tomas",
-    "Score": 3
-  },
-  {
-    "id" : "3155cf13f4a04afe9ac08dd885720976",
-    "Name": "Fiorella",
-    "Score":10
-}
+const leaderboard = [{
+        "id" : '3155cf13f4a04afe9ac08dd885720976',
+        "Name": "Tomas",
+        "Score": 3
+    },
+    {
+        "id" : "3155cf13f4a04afe9ac08dd885720976",
+        "Name": "Fiorella",
+        "Score":10
+    }
 ]
 
+// Middleware
+app.use(express.json()); // For parsing application/json
+app.use(express.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded
 
-app.get('/teams', (req, res) => {
-  res.send(teams)
-})
-app.get('/leaderboard', (req, res) => {
-  res.send(leaderboard)
-})
+// Basic route
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
+
+// app.post('/login', (req,res) => {})
+// app.post('/register', (req,res) => {})
+// app.post('/logout', (req,res) => {})
+
+//Routes
+app.use('/api/teams',require('./routes/teamsRoutes'));
+// app.use('/api/leaderboard',require('./routes/leaderboardRoutes'));
+
 
 app.listen(port, () => {
-  console.log(`Servidor corriendo en el puerto: ${port}`)
+    console.log(`Servidor corriendo en el puerto: ${port}`)
 })
