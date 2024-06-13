@@ -6,4 +6,6 @@ mongoose.connect(source)
   .then(db => console.log('DB is connected'))
   .catch(err => console.error(err));
 
+mongoose.set('bufferCommands', false);
+
 module.exports = mongoose;
