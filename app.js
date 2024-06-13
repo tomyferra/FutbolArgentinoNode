@@ -6,11 +6,6 @@ const app = express();
 
 const cors = require('cors');
 
-// Connect to MongoDB
-mongoose.connect(process.env.TEAMS_URI)
-    .then(() => console.log('MongoDB conectada correctamente'))
-    .catch(err => console.error('MongoDB error:', err));
-
 //settings
 var port = process.env.PORT || 5001
 // app.set('port', process.env.PORT || 5001);
@@ -32,7 +27,6 @@ app.use(express.urlencoded({ extended: true })); // For parsing application/x-ww
 
 // Basic route
 app.get('/', (req, res) => {
-    console.log(TEAMS_URI)
     res.send('Hello, World!');
 });
 

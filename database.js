@@ -1,7 +1,8 @@
 // conexion a la base de datos
 const mongoose = require('mongoose');
 require('dotenv').config();
-mongoose.connect(process.env.TEAMS_URI)
+const source = process.env.TEAMS_URI;
+mongoose.connect(source)
   .then(db => console.log('DB is connected'))
   .catch(err => console.error(err));
 
