@@ -7,15 +7,18 @@ const Team = require('../models/teams');
 router.get('/', async (req,res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE,OPTIONS');
-
   const teams = await Team.find();
   res.json(teams);
+  console.log("running....")
+
 });
 
 //Get single Team from DB
 router.get('/:id', async (req,res) => {
   const teamfiltered = await Team.findById(req.params.id);
   res.json(teamfiltered);
+  console.log("running....")
+
 });
 
 //Add new teams to the database
