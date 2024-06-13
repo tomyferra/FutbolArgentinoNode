@@ -1,7 +1,7 @@
 const express = require ('express');
 const morgan  = require('morgan');
 const path = require('path');
-const {mongoose} = require('../database')
+const {mongoose} = require('./database')
 const app = express();
 
 const cors = require('cors');
@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true })); // For parsing application/x-ww
 
 
 //Routes
-app.use('/api/v1/teams',require('../routes/teamsRoutes'));
+app.use('/api/teams',require('./routes/teamsRoutes'));
 // app.use('/api/leaderboard',require('./routes/leaderboardRoutes'));
 
 //Static Files
