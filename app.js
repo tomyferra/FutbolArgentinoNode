@@ -25,11 +25,6 @@ app.use(function (req, res, next) {
 app.use(express.json()); // For parsing application/json
 app.use(express.urlencoded({ extended: true })); // For parsing application/x-www-form-urlencoded
 
-// Basic route
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
-
 
 //Routes
 app.use('/api/teams',require('./routes/teamsRoutes'));

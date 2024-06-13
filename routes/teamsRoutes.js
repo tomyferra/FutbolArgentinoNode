@@ -9,7 +9,6 @@ router.get('/', async (req,res) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE,OPTIONS');
 
   const teams = await Team.find();
-  console.log(teams);
   res.json(teams);
 });
 
@@ -21,7 +20,6 @@ router.get('/:id', async (req,res) => {
 
 //Add new teams to the database
 router.post('/', async (req,res) => {
-  console.log(req.body);
   const { Name, Country, Logo, City, StadiumName, StadiumImg,StadiumCapacity, id} = req.body;
   const team = new Team({ Name, Country, Logo, City, StadiumName, StadiumImg,StadiumCapacity, id });
   await team.save();
