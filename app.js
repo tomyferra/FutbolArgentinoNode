@@ -6,7 +6,6 @@ import team from './models/teams.js'
 import { fileURLToPath } from 'url' // To handle __dirname with ES6 modules
 
 const app = express()
-// settings
 const port = process.env.PORT || 5001
 // Middlewares
 app.use(morgan('dev'))
@@ -30,16 +29,11 @@ dbConnect()
 
 // Api home page
 app.get('/teams', async (req, res) => {
-  console.log('getting')
-  // res.setHeader('Access-Control-Allow-Origin', '*')
-  // res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE,OPTIONS')
-  const teams = await team.find().limit(5)
+  const teams = await team.find()
   res.json(teams)
-  console.log('running....')
 })
 
 // Static Files
-// app.use(express.static(path.join(__dirname, 'public')))
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 app.use(express.static(path.join(__dirname, 'public')))
 
