@@ -30,6 +30,8 @@ app.use(express.urlencoded({ extended: true })); // For parsing application/x-ww
 app.use('/api/teams',require('./routes/teamsRoutes'));
 // app.use('/api/leaderboard',require('./routes/leaderboardRoutes'));
 
+//Static Files
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto: ${port}`)
