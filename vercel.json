@@ -1,11 +1,6 @@
 {
   "version": 2,
   "name": "futbolargentino-api",
-   "functions": {
-     "api/*.js": {
-       "maxDuration": 10
-     }
-   },
   "builds": [
      { "src": "app.js", "use": "@vercel/node" }
   ],
