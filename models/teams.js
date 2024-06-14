@@ -12,4 +12,4 @@ const TeamsSchema = new Schema({
   id: { type: Number }
 }, { collection: 'teams' })
 
-export default mongoose.model('User', TeamsSchema)
+export default mongoose.model('team', TeamsSchema)

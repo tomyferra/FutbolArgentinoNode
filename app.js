@@ -3,6 +3,7 @@ import morgan from 'morgan'
 import path from 'path'
 import dbConnect from './database.js'
 import team from './models/teams.js'
+import leaderboard from './models/leaderboard.js'
 import { fileURLToPath } from 'url' // To handle __dirname with ES6 modules
 
 const app = express()
@@ -28,9 +29,14 @@ app.use(express.urlencoded({ extended: true })) // For parsing application/x-www
 dbConnect()
 
 // Api home page
-app.get('/teams', async (req, res) => {
+app.get('/api/teams', async (req, res) => {
   const teams = await team.find()
   res.json(teams)
+})
+// Api home page
+app.get('/api/leaderboard', async (req, res) => {
+  const leaderboardData = await leaderboard.find()
+  res.json(leaderboardData)
 })
 
 // Static Files
