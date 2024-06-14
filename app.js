@@ -10,6 +10,8 @@ const app = express()
 const port = process.env.PORT || 5001
 // Middlewares
 app.use(morgan('dev'))
+app.use(express.json()) // For parsing application/json
+app.use(express.urlencoded({ extended: true })) // For parsing application/x-www-form-urlencoded
 
 // Enable CORS
 app.use(function (req, res, next) {
@@ -19,13 +21,6 @@ app.use(function (req, res, next) {
   next()
 })
 
-// Middleware
-app.use(express.json()) // For parsing application/json
-app.use(express.urlencoded({ extended: true })) // For parsing application/x-www-form-urlencoded
-
-// Routes
-// app.use('/api/teams', require('./routes/teamsRoutes'))
-// app.use('/api/leaderboard',require('./routes/leaderboardRoutes'))
 dbConnect()
 
 // Api home page
@@ -37,6 +32,14 @@ app.get('/api/teams', async (req, res) => {
 app.get('/api/leaderboard', async (req, res) => {
   const leaderboardData = await leaderboard.find()
   res.json(leaderboardData)
+})
+
+// Add new leader to the database
+app.post('/api/leaderboard', async (req, res) => {
+  const { Name, Score } = req.body
+  const leader = new leaderboard({ Name, Score })
+  await leader.save()
+  res.json({ Status: 'leader saved' })
 })
 
 // Static Files

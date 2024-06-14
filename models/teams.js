@@ -8,8 +8,7 @@ const TeamsSchema = new Schema({
   City: { type: String },
   StadiumName: { type: String },
   StadiumImg: { type: String },
-  StadiumCaoacity: { type: Number },
-  id: { type: Number }
+  StadiumCaoacity: { type: Number }
 }, { collection: 'teams' })
 
 export default mongoose.model('team', TeamsSchema)
